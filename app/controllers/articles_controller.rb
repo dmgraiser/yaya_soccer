@@ -10,9 +10,31 @@ class ArticlesController < ApplicationController
     respond_with(@articles)
   end
 
+
+
+# ************************************************************************
+# RANDOMIZE ANSWER DISPLAY
+# **********************************************************************
+
+
   def show
     respond_with(@article)
-  end
+
+      @randomize_answers1 = []
+      @randomize_answers1.push(@article.q1answer)
+      @randomize_answers1.push(@article.q1wrong1) 
+      @randomize_answers1.push(@article.q1wrong2) 
+
+      @randomize_answers2 = []
+      @randomize_answers2.push(@article.q2answer)
+      @randomize_answers2.push(@article.q2wrong1) 
+      @randomize_answers2.push(@article.q2wrong2) 
+
+      @randomize_answers3 = []
+      @randomize_answers3.push(@article.q3answer)
+      @randomize_answers3.push(@article.q3wrong1) 
+      @randomize_answers3.push(@article.q3wrong2)
+    end
 
   def new
     @article = Article.new
