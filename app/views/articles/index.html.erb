@@ -1,0 +1,57 @@
+<h1>Listing articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Publishable</th>
+      <th>Video</th>
+      <th>Part1</th>
+      <th>Quiz1</th>
+      <th>Q1answer</th>
+      <th>Q1wrong1</th>
+      <th>Q1wrong2</th>
+      <th>Part2</th>
+      <th>Quiz2</th>
+      <th>Q2answer</th>
+      <th>Q2wrong1</th>
+      <th>Q2wrong2</th>
+      <th>Part3</th>
+      <th>Quiz3</th>
+      <th>Q3answer</th>
+      <th>Q3wrong1</th>
+      <th>Q3wrong2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.publishable %></td>
+        <td><%= article.video %></td>
+        <td><%= article.part1 %></td>
+        <td><%= article.quiz1 %></td>
+        <td><%= article.q1answer %></td>
+        <td><%= article.q1wrong1 %></td>
+        <td><%= article.q1wrong2 %></td>
+        <td><%= article.part2 %></td>
+        <td><%= article.quiz2 %></td>
+        <td><%= article.q2answer %></td>
+        <td><%= article.q2wrong1 %></td>
+        <td><%= article.q2wrong2 %></td>
+        <td><%= article.part3 %></td>
+        <td><%= article.quiz3 %></td>
+        <td><%= article.q3answer %></td>
+        <td><%= article.q3wrong1 %></td>
+        <td><%= article.q3wrong2 %></td>
+        <td><%= link_to 'Show', article %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>

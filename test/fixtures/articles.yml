@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  publishable: false
+  video: MyString
+  part1: MyText
+  quiz1: MyString
+  q1answer: MyString
+  q1wrong1: MyString
+  q1wrong2: MyString
+  part2: MyText
+  quiz2: MyString
+  q2answer: MyString
+  q2wrong1: MyString
+  q2wrong2: MyString
+  part3: MyText
+  quiz3: MyString
+  q3answer: MyString
+  q3wrong1: MyString
+  q3wrong2: MyString
+
+two:
+  publishable: false
+  video: MyString
+  part1: MyText
+  quiz1: MyString
+  q1answer: MyString
+  q1wrong1: MyString
+  q1wrong2: MyString
+  part2: MyText
+  quiz2: MyString
+  q2answer: MyString
+  q2wrong1: MyString
+  q2wrong2: MyString
+  part3: MyText
+  quiz3: MyString
+  q3answer: MyString
+  q3wrong1: MyString
+  q3wrong2: MyString

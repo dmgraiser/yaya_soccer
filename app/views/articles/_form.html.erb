@@ -1,0 +1,85 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :publishable %><br>
+    <%= f.check_box :publishable %>
+  </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </div>
+  <div class="field">
+    <%= f.label :part1 %><br>
+    <%= f.text_area :part1 %>
+  </div>
+  <div class="field">
+    <%= f.label :quiz1 %><br>
+    <%= f.text_field :quiz1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q1answer %><br>
+    <%= f.text_field :q1answer %>
+  </div>
+  <div class="field">
+    <%= f.label :q1wrong1 %><br>
+    <%= f.text_field :q1wrong1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q1wrong2 %><br>
+    <%= f.text_field :q1wrong2 %>
+  </div>
+  <div class="field">
+    <%= f.label :part2 %><br>
+    <%= f.text_area :part2 %>
+  </div>
+  <div class="field">
+    <%= f.label :quiz2 %><br>
+    <%= f.text_field :quiz2 %>
+  </div>
+  <div class="field">
+    <%= f.label :q2answer %><br>
+    <%= f.text_field :q2answer %>
+  </div>
+  <div class="field">
+    <%= f.label :q2wrong1 %><br>
+    <%= f.text_field :q2wrong1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q2wrong2 %><br>
+    <%= f.text_field :q2wrong2 %>
+  </div>
+  <div class="field">
+    <%= f.label :part3 %><br>
+    <%= f.text_area :part3 %>
+  </div>
+  <div class="field">
+    <%= f.label :quiz3 %><br>
+    <%= f.text_field :quiz3 %>
+  </div>
+  <div class="field">
+    <%= f.label :q3answer %><br>
+    <%= f.text_field :q3answer %>
+  </div>
+  <div class="field">
+    <%= f.label :q3wrong1 %><br>
+    <%= f.text_field :q3wrong1 %>
+  </div>
+  <div class="field">
+    <%= f.label :q3wrong2 %><br>
+    <%= f.text_field :q3wrong2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
