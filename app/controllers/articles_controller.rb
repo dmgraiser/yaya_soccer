@@ -3,6 +3,8 @@ class ArticlesController < ApplicationController
 
   respond_to :html
 
+  before_filter :authenticate_user!
+
   def index
     @articles = Article.all
     respond_with(@articles)
