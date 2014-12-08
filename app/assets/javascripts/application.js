@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+	$('#quiz1').click(function(){
+		$(".part-two").fadeToggle();
+	});
+	$('.wrong').click(function(){
+		alert('Sorry, please try again.');
+	});
+}) 
