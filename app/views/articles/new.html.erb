@@ -1,5 +1,65 @@
-<h1>New article</h1>
+<style type="text/css">
+  #article_new {
+    margin-left: -100px;
+    margin-right: -100px;
+    height: 100%;
+    background: url(<%= asset_path "loginbg.jpeg" %>) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-<%= render 'form' %>
+  .text-box{
+    background: rgba(250, 250, 250, .75);
+  }
 
-<%= link_to 'Back', articles_path %>
+  .text-area{
+  	width: 100%;
+  	height: 20em;
+  	padding:6px 12px;
+  	font-size:14px;
+  	line-height:1.42857143;
+		color:#555;
+		background-color:#fff;
+		background-image:none;
+		border:1px solid #ccc;
+		border-radius:4px;
+		-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+		box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+		-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+		-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  }
+
+  .text-area:focus{
+  	border-color:#66afe9;
+  	outline:0;
+  	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+  }
+
+  label{
+  	text-transform: capitalize;
+  }
+
+</style>
+<div id="article_new">
+	<br />
+  <br />
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-box">
+			<h1>New Article</h1>
+
+			<%= render 'form' %>
+
+			<%= link_to 'Back', articles_path %>
+		</div>
+	</div>
+	<br />
+  <br />
+  <br />
+  <br />
+</div>

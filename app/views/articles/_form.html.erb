@@ -12,75 +12,75 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :publishable %><br>
-    <%= f.check_box :publishable %>
+    <%= f.check_box :publishable %> <%= f.label :publishable %>
   </div>
+  <hr style="height:2px;background-color:gray">
   <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video %>
-  </div>
-  <div class="field">
-    <%= f.label :part1 %><br>
-    <%= f.text_area :part1 %>
+    <%= f.text_area :part1, class: "text-area", placeholder: "Article Part 1" %>
   </div>
 
   <div class="field">
-    <%= f.label :quiz1 %><br>
-    <%= f.text_field :quiz1 %>
+    <%= f.label "Question 1" %><br>
+    <%= f.text_field :quiz1, class: "form-control", placeholder: "Question 1" %>
   </div>
   <div class="field">
-      <%= f.label :q1answer %><br>
-      <%= f.text_field :q1answer %>
+      &bull; <%= f.label "Question 1 Correct Answer" %><br>
+      <%= f.text_field :q1answer, class: "form-control", placeholder: "Type CORRECT answer here" %>
   </div>
   <div class="field">
-      <%= f.label :q1wrong1 %><br>
-      <%= f.text_field :q1wrong1 %>
+      &bull; <%= f.label "Question 1 Incorrect Answer" %><br>
+      <%= f.text_field :q1wrong1, class: "form-control", placeholder: "Type INCORRECT answer here" %>
   </div>
   <div class="field">
-      <%= f.label :q1wrong2 %><br>
-      <%= f.text_field :q1wrong2 %>
+      &bull; <%= f.label "Question 1 Incorrect Answer" %><br>
+      <%= f.text_field :q1wrong2, class: "form-control", placeholder: "Type INCORRECT answer here" %>
+  </div>
+  <hr style="height:2px;background-color:gray">
+  <div class="field">
+    <%= f.text_area :part2, class: "text-area", placeholder: "Article Part 2" %>
   </div>
   <div class="field">
-    <%= f.label :part2 %><br>
-    <%= f.text_area :part2 %>
+    <%= f.label "Question 2" %><br>
+    <%= f.text_field :quiz2, class: "form-control", placeholder: "Question 2" %>
   </div>
   <div class="field">
-    <%= f.label :quiz2 %><br>
-    <%= f.text_field :quiz2 %>
+    &bull; <%= f.label "Question 2 Correct Answer" %><br>
+      <%= f.text_field :q2answer, class: "form-control", placeholder: "Type CORRECT answer here" %>
   </div>
   <div class="field">
-    <%= f.label :q2answer %><br>
-    <%= f.text_field :q2answer %>
+    &bull; <%= f.label "Question 2 Incorrect Answer" %><br>
+      <%= f.text_field :q2wrong1, class: "form-control", placeholder: "Type INCORRECT answer here" %>
   </div>
   <div class="field">
-    <%= f.label :q2wrong1 %><br>
-    <%= f.text_field :q2wrong1 %>
+    &bull; <%= f.label "Question 2 Incorrect Answer" %><br>
+      <%= f.text_field :q2wrong2, class: "form-control", placeholder: "Type INCORRECT answer here" %>
+  </div>
+  <hr style="height:2px;background-color:gray">
+  <div class="field">
+    <%= f.text_area :part3, class: "text-area", placeholder: "Article Part 3" %>
   </div>
   <div class="field">
-    <%= f.label :q2wrong2 %><br>
-    <%= f.text_field :q2wrong2 %>
+    <%= f.label "Question 3" %><br>
+    <%= f.text_field :quiz3, class: "form-control", placeholder: "Question 3" %>
   </div>
   <div class="field">
-    <%= f.label :part3 %><br>
-    <%= f.text_area :part3 %>
+    &bull; <%= f.label "Question 3 Correct Answer" %><br>
+      <%= f.text_field :q3answer, class: "form-control", placeholder: "Type CORRECT answer here" %>
   </div>
   <div class="field">
-    <%= f.label :quiz3 %><br>
-    <%= f.text_field :quiz3 %>
+    &bull; <%= f.label "Question 3 Incorrect Answer" %><br>
+      <%= f.text_field :q3wrong1, class: "form-control", placeholder: "Type INCORRECT answer here" %>
   </div>
   <div class="field">
-    <%= f.label :q3answer %><br>
-    <%= f.text_field :q3answer %>
+    &bull; <%= f.label "Question 3 Incorrect Answer" %><br>
+      <%= f.text_field :q3wrong2, class: "form-control", placeholder: "Type INCORRECT answer here" %>
   </div>
+  <hr style="height:2px;background-color:gray">
   <div class="field">
-    <%= f.label :q3wrong1 %><br>
-    <%= f.text_field :q3wrong1 %>
+    <%= f.label :video %><br>
+    <%= f.text_field :video, class: "form-control", placeholder: "Past URL here" %>
   </div>
-  <div class="field">
-    <%= f.label :q3wrong2 %><br>
-    <%= f.text_field :q3wrong2 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <%= f.submit "Create Article", class: "btn btn-success" %>
   </div>
 <% end %>
