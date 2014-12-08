@@ -1,3 +1,72 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.flip-container {
+	perspective: 1000;
+}
+
+.flip-container, .front, .back {
+	width: 260px;
+	height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	background: none repeat scroll 0% 0% #90EE90;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	background: none repeat scroll 0% 0% #90EE90;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+#container {
+    width: 1000px;
+    background-color: white;
+    overflow: auto;
+    height: 400px;
+    white-space: nowrap;
+    padding-left: 140px
+}
+
+.contents {
+    display: inline-block;
+}
+#one {
+    float: left;
+}
+ #two {
+    float: left;
+    
+}
+
+
+#three {
+    float: left;
+}
+
