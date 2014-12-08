@@ -3,7 +3,10 @@
     margin-left: -100px;
     margin-right: -100px;
     height: 800px;
-    background: url(<%= asset_path "loginbg.jpeg" %>) no-repeat;
+    background: url(<%= asset_path "loginbg.jpeg" %>) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
 
@@ -56,14 +59,6 @@
 
         <div class="field">
           <h4><%= f.check_box :parental_approval %> <%= f.label "Do you have your parent's permission?" %></h4>
-        </div>
-
-        <div class="field">
-          <h4><%= f.check_box :editor %> <%= f.label :editor %></h4>
-        </div>
-
-        <div class="field">
-          <h4><%= f.check_box :publisher %> <%= f.label :publisher %></h4>
         </div>
 
         <div>
