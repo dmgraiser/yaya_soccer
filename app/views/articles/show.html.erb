@@ -13,10 +13,10 @@
 </p>
 
 <% @randomize_answers1.shuffle.each do |answer| %>
-<% if ans == @article.q1answer %>
+<% if answer == @article.q1answer %>
   <button id="quiz1"><%= answer %></button>
   <% else %>
-  <button class="wrong"><%= ans %>><%= ans %></button>
+  <button class="wrong"><%= answer %></button>
   <% end %>
 <% end %>
 
@@ -34,7 +34,11 @@
 </p>
 
 <% @randomize_answers2.shuffle.each do |answer| %>
-  <%= answer %><br />
+<% if answer == @article.q2answer %>
+  <button id="quiz2"><%= answer %></button>
+  <% else %>
+  <button class="wrong"><%= answer %></button>
+  <% end %>
 <% end %>
 
 <div class="part-three">
@@ -50,8 +54,12 @@
   <%= @article.quiz3 %>
 </p>
 
-<% @randomize_answers2.shuffle.each do |answer| %>
-  <%= answer %><br />
+<% @randomize_answers3.shuffle.each do |answer| %>
+<% if answer == @article.q3answer %>
+  <button id="quiz2"><%= answer %></button>
+  <% else %>
+  <button class="wrong"><%= answer %></button>
+  <% end %>
 <% end %>
 
 <div class="video">
