@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Video:</strong>
-  <%= @article.video %>
-</p>
+
 
 <p>
   <strong>Part1:</strong>
@@ -15,20 +12,16 @@
   <%= @article.quiz1 %>
 </p>
 
-<p>
-  <strong>Q1answer:</strong>
-  <%= @article.q1answer %>
-</p>
+<% @randomize_answers1.shuffle.each do |answer| %>
+<% if answer == @article.q1answer %>
+  <button id="quiz1"><%= answer %></button>
+  <% else %>
+  <button class="wrong"><%= answer %></button>
+  <% end %>
+<% end %>
 
-<p>
-  <strong>Q1wrong1:</strong>
-  <%= @article.q1wrong1 %>
-</p>
+<div class="part-two">
 
-<p>
-  <strong>Q1wrong2:</strong>
-  <%= @article.q1wrong2 %>
-</p>
 
 <p>
   <strong>Part2:</strong>
@@ -40,20 +33,16 @@
   <%= @article.quiz2 %>
 </p>
 
-<p>
-  <strong>Q2answer:</strong>
-  <%= @article.q2answer %>
-</p>
+<% @randomize_answers2.shuffle.each do |answer| %>
+<% if answer == @article.q2answer %>
+  <button id="quiz2"><%= answer %></button>
+  <% else %>
+  <button class="wrong"><%= answer %></button>
+  <% end %>
+<% end %>
 
-<p>
-  <strong>Q2wrong1:</strong>
-  <%= @article.q2wrong1 %>
-</p>
+<div class="part-three">
 
-<p>
-  <strong>Q2wrong2:</strong>
-  <%= @article.q2wrong2 %>
-</p>
 
 <p>
   <strong>Part3:</strong>
@@ -65,7 +54,17 @@
   <%= @article.quiz3 %>
 </p>
 
-<p>
+<% @randomize_answers3.shuffle.each do |answer| %>
+<% if answer == @article.q3answer %>
+  <button id="quiz2"><%= answer %></button>
+  <% else %>
+  <button class="wrong"><%= answer %></button>
+  <% end %>
+<% end %>
+
+<div class="video">
+
+<!-- <p>
   <strong>Q3answer:</strong>
   <%= @article.q3answer %>
 </p>
@@ -79,6 +78,13 @@
   <strong>Q3wrong2:</strong>
   <%= @article.q3wrong2 %>
 </p>
+ -->
+
+ <p>
+  <strong>Video:</strong>
+  <%= @article.video %>
+</p>
+
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

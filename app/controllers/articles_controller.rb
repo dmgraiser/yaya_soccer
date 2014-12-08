@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
 
   def show
-    respond_with(@article)
+    
 
       @randomize_answers1 = []
       @randomize_answers1.push(@article.q1answer)
@@ -34,6 +34,8 @@ class ArticlesController < ApplicationController
       @randomize_answers3.push(@article.q3answer)
       @randomize_answers3.push(@article.q3wrong1) 
       @randomize_answers3.push(@article.q3wrong2)
+
+      respond_with(@article)
     end
 
   def new
