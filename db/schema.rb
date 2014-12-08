@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204133524) do
+ActiveRecord::Schema.define(version: 20141208143944) do
 
   create_table "articles", force: true do |t|
     t.boolean  "publishable"
@@ -31,6 +31,24 @@ ActiveRecord::Schema.define(version: 20141204133524) do
     t.string   "q3answer"
     t.string   "q3wrong1"
     t.string   "q3wrong2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", force: true do |t|
+    t.string   "name"
+    t.integer  "team_id"
+    t.integer  "article_id"
+    t.integer  "goals"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", force: true do |t|
+    t.string   "name"
+    t.integer  "article_id"
+    t.integer  "wins"
+    t.integer  "loses"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
