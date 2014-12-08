@@ -20,6 +20,12 @@ $(document).ready(function(){
 	$('#quiz1').click(function(){
 		$(".part-two").fadeToggle();
 	});
+	$('#quiz2').click(function(){
+		$(".part-three").fadeToggle();
+	});
+	$('#quiz3').click(function(){
+		$(".video").fadeToggle();
+	});
 	$('.wrong').click(function(){
 		alert('Sorry, please try again.');
 	});
