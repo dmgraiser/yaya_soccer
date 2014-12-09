@@ -60,9 +60,16 @@
         <div class="contents" id="one">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                   <div class="flipper">
-                    <div class="front">
-                    <!-- front content -->
-                    <%= image_tag "beckham1.jpeg", class: "resize" %>
+                    <div class="front-a">
+                      <!-- front content -->
+                    <style>
+                    .front-a {
+                      height: 300px;
+                      width:260px;
+                      background: url(<%= asset_path 'beckham1.jpeg' %>) no-repeat;
+                      background-size: cover;  
+                    }
+                    </style>       
                     <h3> David Beckham </h3>
                   </div>
                   <div class="back">
@@ -81,9 +88,16 @@
                     <div class="contents" id="two">
                       <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
-                          <div class="front">
-                      <!-- front content -->
-                      <%= image_tag "christiano1.jpeg", class: "resize" %>
+                          <div class="front-b">
+                            <!-- front content -->
+                            <style>
+                            .front-b {
+                              height: 300px;
+                              width:260px;
+                              background: url(<%= asset_path 'christiano1.jpeg' %>) no-repeat;
+                              background-size: cover;  
+                            }
+                              </style>
                       <h3> Christiano Ronaldo </h3>
                     </div>
                     <div class="back">
@@ -102,9 +116,16 @@
                     <div class="contents" id="three">
                       <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                         <div class="flipper">
-                          <div class="front">
-                      <!-- front content -->
-                      <%= image_tag "ronaldinho3.jpeg", class: "resize" %>
+                          <div class="front-c">
+                            <!-- front content -->
+                            <style>
+                            .front-c {
+                              height: 300px;
+                              width:260px;
+                              background: url(<%= asset_path 'ronaldinho1.jpeg' %>) no-repeat;
+                              background-size: cover;  
+                            }
+                            </style>
                       <h3> Ronaldinho </h3>
                     </div>
                     <div class="back">

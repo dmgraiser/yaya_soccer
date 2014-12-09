@@ -7,7 +7,7 @@
 	perspective: 1000;
 }
 
-.flip-container, .front, .back {
+.flip-container, .front-a, .front-b, .front-c, .back {
 	width: 260px;
 	height: 300px;
 }
@@ -20,7 +20,7 @@
 }
 
 /* hide back of pane during swap */
-.front, .back {
+.front-a, .front-b, .front-c, .back {
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
@@ -28,7 +28,7 @@
 }
 
 /* front pane, placed above back */
-.front {
+.front-a, .front-b, .front-c {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
@@ -54,10 +54,6 @@
     padding-left: 140px
 }
 
-.resize {
-	height: 194px;
-	width: 259px;
-}
 
 .contents {
     display: inline-block;
@@ -66,11 +62,21 @@
     float: left;
 }
  #two {
-    float: left;
-    
+    float: left;   
 }
 
 #three {
     float: left;
 }
+
+h3 {
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+
+
+
 
