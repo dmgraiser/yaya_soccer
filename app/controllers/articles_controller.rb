@@ -39,11 +39,15 @@ class ArticlesController < ApplicationController
     end
 
   def new
+    @players = Player.all
+    @teams = Team.all
     @article = Article.new
     respond_with(@article)
   end
 
   def edit
+    @players = Player.all
+    @teams = Team.all
   end
 
   def create
@@ -68,6 +72,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:publishable, :video, :part1, :quiz1, :q1answer, :q1wrong1, :q1wrong2, :part2, :quiz2, :q2answer, :q2wrong1, :q2wrong2, :part3, :quiz3, :q3answer, :q3wrong1, :q3wrong2)
+      params.require(:article).permit(:publishable, :video, :part1, :quiz1, :q1answer, :q1wrong1, :q1wrong2, :part2, :quiz2, :q2answer, :q2wrong1, :q2wrong2, :part3, :quiz3, :q3answer, :q3wrong1, :q3wrong2, :team_id, :player_id)
     end
 end

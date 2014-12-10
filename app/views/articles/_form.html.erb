@@ -14,7 +14,21 @@
   <div class="field">
     <%= f.check_box :publishable %> <%= f.label :publishable %>
   </div>
+
   <hr style="height:2px;background-color:gray">
+
+  <div class="field">
+    <%= f.label "Player" %><br>
+    <%= f.select(:player_id, @players.collect {|d| [ d.name, d.id ] }.sort, {:include_blank => 'Please select a player'}) %>
+  </div>
+  <div>and/or</div>
+  <div class="field">
+    <%= f.label "Team" %><br>
+    <%= f.select(:team_id, @teams.collect {|d| [ d.name, d.id ] }.sort, {:include_blank => 'Please select a team'}) %>
+  </div>
+
+  <hr style="height:2px;background-color:gray">
+
   <div class="field">
     <%= f.text_area :part1, class: "text-area", placeholder: "Article Part 1" %>
   </div>

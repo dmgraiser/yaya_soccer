@@ -13,11 +13,13 @@ class PlayersController < ApplicationController
   end
 
   def new
+    @teams = Team.all
     @player = Player.new
     respond_with(@player)
   end
 
   def edit
+    @teams = Team.all
   end
 
   def create

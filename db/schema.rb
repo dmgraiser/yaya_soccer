@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208143944) do
+ActiveRecord::Schema.define(version: 20141210205350) do
 
   create_table "articles", force: true do |t|
     t.boolean  "publishable"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20141208143944) do
     t.string   "q3wrong2"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team_id"
+    t.integer  "player_id"
   end
 
   create_table "players", force: true do |t|
