@@ -10,6 +10,11 @@ class ArticlesController < ApplicationController
     respond_with(@articles)
   end
 
+  def editor_index
+    @articles = Article.all
+    respond_with(@articles)
+  end
+
 
 
 # ************************************************************************

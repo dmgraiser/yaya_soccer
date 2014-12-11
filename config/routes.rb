@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'editor_index' => 'articles#editor_index'
+
   resources :players
 
   resources :teams

@@ -1,0 +1,65 @@
+<% @articles.each do |article| %>
+	<div class="editor-article">
+		<div>
+			<% if article.player != nil %>
+				<h3>
+					<%= article.player.name %>
+				</h3>
+			<% elsif article.team != nil %>
+				<h3>
+					<%= article.team.name %>
+				</h3>
+			<% end %>
+		</div>
+		<div class="edit-or-destroy">
+			<%= link_to 'Edit', edit_article_path(article), class: "btn btn-warning" %>   <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+		</div>
+		<div class="article-part-one">
+			<p>
+				<%= article.part1 %>
+			</p>
+			<p>
+				<%= article.quiz1 %>
+			</p>
+			<ul>
+				<li><strong><%= article.q1answer %></strong></li>
+				<li><%= article.q1wrong1 %></li>
+				<li><%= article.q1wrong2 %></li>
+			</ul>
+		</div>
+		<div class="article-part-two">
+			<p>
+				<%= article.part2 %>
+			</p>
+			<p>
+				<%= article.quiz2 %>
+			</p>
+			<ul>
+				<li><strong><%= article.q2answer %></strong></li>
+				<li><%= article.q2wrong1 %></li>
+				<li><%= article.q2wrong2 %></li>
+			</ul>
+		</div>
+		<div class="article-part-three">
+			<p>
+				<%= article.part3 %>
+			</p>
+			<p>
+				<%= article.quiz3 %>
+			</p>
+			<ul>
+				<li><strong><%= article.q3answer %></strong></li>
+				<li><%= article.q3wrong1 %></li>
+				<li><%= article.q3wrong2 %></li>
+			</ul>
+		</div>
+		<div class="article-video">
+      <div class="embed-responsive embed-responsive-16by9">
+        <%= article.video.html_safe %>
+      </div>
+		</div>
+	</div>
+	<br />
+	<hr />
+	<br />
+<% end %>
