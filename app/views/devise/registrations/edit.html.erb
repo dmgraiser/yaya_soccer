@@ -23,6 +23,18 @@
 
         <br />
 
+        <% if can? :manage, :all %>
+          <div class="field">
+            <h4><%= f.check_box :editor %> <%= f.label :editor %></h4>
+          </div>
+
+          <div class="field">
+            <h4><%= f.check_box :publisher %> <%= f.label :publisher %></h4>
+          </div>
+        <% end %>
+
+        <br />
+
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
@@ -30,9 +42,9 @@
         <div class="input-group">
           <span class="input-group-addon glyphicon glyphicon-lock"></span>
           <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control input-lg" %>
-          <br /><i>(leave blank if you don't want to change it)</i>
         </div>
-
+        <div><em>(leave blank if you don't want to change it)</em></div>
+        
         <br />
 
         <div class="input-group">
@@ -44,18 +56,8 @@
         <div class="input-group">
           <span class="input-group-addon glyphicon glyphicon-lock"></span>
           <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password", class: "form-control input-lg" %>
-          <br /><i>(we need your current password to confirm your changes)</i>
         </div>
-
-        <br />
-
-        <div class="field">
-          <h4><%= f.check_box :editor %> <%= f.label :editor %></h4>
-        </div>
-
-        <div class="field">
-          <h4><%= f.check_box :publisher %> <%= f.label :publisher %></h4>
-        </div>
+        <div><em>(we need your current password to confirm your changes)</em></div>
 
         <br />
 

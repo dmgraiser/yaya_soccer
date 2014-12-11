@@ -1,6 +1,8 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
 
+  authorize_resource :class => false
+
   respond_to :html
 
   def index

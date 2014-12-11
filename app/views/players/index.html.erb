@@ -1,3 +1,4 @@
+<% if can? :update, :all %>
 <div class="players-page">
   <h1>Listing Players</h1>
 
@@ -31,3 +32,8 @@
 
   <%= link_to 'New Player', new_player_path %>
 </div>
+<% else %>
+  <div class="players-page not-allowed">
+    <p>Sorry, you're not allow here :-(</p>
+  </div>
+<% end %>

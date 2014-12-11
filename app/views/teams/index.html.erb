@@ -1,3 +1,4 @@
+<% if can? :manage, :all %>
 <div class="teams-page">
   <h1>Listing teams</h1>
 
@@ -31,3 +32,8 @@
 
   <%= link_to 'New Team', new_team_path %>
 </div>
+<% else %>
+  <div class="players-page not-allowed">
+    <p>Sorry, you're not allow here :-(</p>
+  </div>
+<% end %>
