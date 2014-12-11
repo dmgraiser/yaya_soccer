@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+gem 'cancan'
+
 gem 'paperclip'
 
 group :development, :test do
