@@ -2,6 +2,42 @@
 <br />
 <br />
 <div class="row">
+  <% @articles.each do |article| %>
+    <style>
+      .article-bg-<%= article.id%> {
+        background: url(<%= asset_path 'beckham1.jpeg' %>) no-repeat;
+        background-size: 100% 100%;
+      }
+    </style>
+    <div class="col-md-4">
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front article-bg-<%= article.id %>">
+            <span>
+              <h3><%= article.player.name %></h3>
+            </span>
+          </div>
+          <div class="back article-bg-<%= article.id %>">
+            <div class="shadebox">
+              <span>
+                <%= article.part1[0..30] %>...<br />
+                <%= link_to 'Read More', article, class: "btn btn-primary" %>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+
+<div class="row">
   <div class="col-md-4">
     <div class="contents" id="one">
       <div class="flip-container" ontouchstart="this.classList.toggle('hover');">

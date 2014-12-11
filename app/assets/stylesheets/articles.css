@@ -1,13 +1,8 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .flip-container {
 	perspective: 1000;
 }
 
-.flip-container, .front-a, .front-b, .front-c, .back {
+.flip-container, .front, .back, .front-a, .front-b, .front-c, .back {
 	width: 260px;
 	height: 300px;
 }
@@ -20,7 +15,7 @@
 }
 
 /* hide back of pane during swap */
-.front-a, .front-b, .front-c, .back {
+.front-a, .front-b, .front-c, .front, .back {
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
@@ -33,6 +28,12 @@
 	/* for firefox 31 */
 	transform: rotateY(0deg);
 	background: none repeat scroll 0% 0% #90EE90;
+}
+
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
@@ -68,12 +69,34 @@
     float: left;
 }
 
-h3 {
+h1, h3 {
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
 }
 
+.front span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
 
+.back span {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	/*background: rgba(255,255,255,0.8);*/
+	color: white;
+}
+
+.shadebox {
+	background: rgba(83,81,81,0.8);
+	width: inherit;
+	height: inherit;
+}
 
 
 
