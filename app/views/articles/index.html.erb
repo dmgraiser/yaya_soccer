@@ -1,4 +1,6 @@
-<%= link_to 'New Article', new_article_path %>
+<% if can? :manage, Article %>
+  <%= link_to 'New Article', new_article_path %>
+<% end %>
 <br />
 <br />
 <div class="row">
