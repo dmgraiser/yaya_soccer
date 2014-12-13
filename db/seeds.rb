@@ -32,4 +32,3 @@
 # 	Player.create( name: name, wins: wins, loses: loses )
 # end
 
-users = User.create([{id: 2, email: "dmgraiser@gmail.com", encrypted_password: nil, reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: nil, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, created_at: "2014-12-05 03:06:22", updated_at: "2014-12-11 15:36:34", name: "Doug Graiser", parental_approval: true, editor: true, publisher: true}])

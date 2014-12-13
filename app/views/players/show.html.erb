@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div>
+	<br />
+  <br />
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-box">
+			<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @player.name %>
-</p>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @player.name %>
+			</p>
 
-<p>
-  <strong>Team:</strong>
-  <%= @player.team_id %>
-</p>
+			<p>
+			  <strong>Team:</strong>
+			  <%= @player.team_id %>
+			</p>
 
-<p>
-  <strong>Article:</strong>
-  <%= @player.article_id %>
-</p>
+			<p>
+			  <strong>Goals:</strong>
+			  <%= @player.goals %>
+			</p>
 
-<p>
-  <strong>Goals:</strong>
-  <%= @player.goals %>
-</p>
-
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+			<%= link_to 'Edit', edit_player_path(@player) %> |
+			<%= link_to 'Back', players_path %>
+		</div>
+	</div>
+</div>

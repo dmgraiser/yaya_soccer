@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 text-box">
+			<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @team.name %>
-</p>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @team.name %>
+			</p>
 
-<p>
-  <strong>Article:</strong>
-  <%= @team.article_id %>
-</p>
+			<p>
+			  <strong>Wins:</strong>
+			  <%= @team.wins %>
+			</p>
 
-<p>
-  <strong>Wins:</strong>
-  <%= @team.wins %>
-</p>
+			<p>
+			  <strong>Loses:</strong>
+			  <%= @team.loses %>
+			</p>
 
-<p>
-  <strong>Loses:</strong>
-  <%= @team.loses %>
-</p>
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+			<%= link_to 'Edit', edit_team_path(@team) %> |
+			<%= link_to 'Back', teams_path %>
+		</div>
+	</div>
+</div>

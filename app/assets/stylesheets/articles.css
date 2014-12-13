@@ -15,19 +15,11 @@
 }
 
 /* hide back of pane during swap */
-.front-a, .front-b, .front-c, .front, .back {
+.front, .back {
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-
-/* front pane, placed above back */
-.front-a, .front-b, .front-c {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-	background: none repeat scroll 0% 0% #90EE90;
 }
 
 .front {
@@ -61,16 +53,6 @@
 
 .contents {
     display: inline-block;
-}
-#one {
-    float: left;
-}
- #two {
-    float: left;   
-}
-
-#three {
-    float: left;
 }
 
 h1, h3 {
@@ -112,5 +94,4 @@ h1, h3 {
 	padding: 15px;
 	border-radius: 10px;
 }
-
 
