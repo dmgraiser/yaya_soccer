@@ -29,4 +29,20 @@ $(document).ready(function(){
 	$('.wrong').click(function(){
 		alert('Sorry, please try again.');
 	});
+	//modification to the way bootstrap dropdowns work.
+	//this makes them work on hover at normal rez and on click/touch on phone/tablet
+	$(function () {
+	  var $win = $(window);
+	  $win.resize(function () {
+	    if ($win.width() > 768)
+	      $("flip-container").attr("data-toggle", "");
+	    else
+	      $("flip-container").attr("data-toggle", "dropdown");
+	  }).resize();
+	  $(".dropdown-menu").find("input, button").each(function () {
+	    $(this).click(function (e) {
+	          e.stopPropagation();
+	    });
+	  });
+	});
 }) 
