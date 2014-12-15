@@ -7,17 +7,17 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
-    # respond_with(@players)
+    respond_with(@players)
   end
 
   def show
-    # respond_with(@player)
+    respond_with(@player)
   end
 
   def new
     @teams = Team.all
     @player = Player.new
-    # respond_with(@player)
+    respond_with(@player)
   end
 
   def edit
@@ -27,17 +27,17 @@ class PlayersController < ApplicationController
   def create
     @player = Player.new(player_params)
     @player.save
-    # respond_with(@player)
+    respond_with(@player)
   end
 
   def update
     @player.update(player_params)
-    # respond_with(@player)
+    respond_with(@player)
   end
 
   def destroy
     @player.destroy
-    # respond_with(@player)
+    respond_with(@player)
   end
 
   private
