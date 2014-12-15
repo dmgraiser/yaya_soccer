@@ -1,5 +1,6 @@
 .flip-container {
 	perspective: 1000;
+	-webkit-perspective: 1000;
 }
 
 .flip-container, .front, .back, .front-a, .front-b, .front-c, .back {
@@ -11,12 +12,15 @@
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -26,12 +30,14 @@
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
 	border-radius: 10px;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
 	background: none repeat scroll 0% 0% #90EE90;
 	border-radius: 10px;
 
@@ -40,15 +46,16 @@
 
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
 	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
 }
 
 #container {
-    width: 1000px;
-    background-color: white;
-    overflow: auto;
-    height: 400px;
-    white-space: nowrap;
-    padding-left: 140px
+  width: 1000px;
+  background-color: white;
+  overflow: auto;
+  height: 400px;
+  white-space: nowrap;
+  padding-left: 140px
 }
 
 .contents {
