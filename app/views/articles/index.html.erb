@@ -1,6 +1,8 @@
 <% if can? :manage, Article %>
   <%= link_to 'New Article', new_article_path, class: "btn btn-success btn-lg" %>
 <% end %>
+<span class="notice"><%= notice %></span> 
+<span class="alert"><%= alert %></span>
 <br />
 <br />
 <div class="row">

@@ -46,6 +46,8 @@ gem 'cancan'
 
 gem 'paperclip'
 
+gem 'aws-sdk'
+
 group :development, :test do
  	gem 'foreman'
 end
